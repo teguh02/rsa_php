@@ -1,0 +1,21 @@
+{
+    "name": "teguh02/rsa_php",
+    "description": "Simple package to handle RSA encryption and decryption algorithm",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Teguh02\\RsaPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Teguh Rijanandi",
+            "email": "teguhrijanandi02@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require-dev": {
+        "phpunit/phpunit": "^11"
+    }
+}
