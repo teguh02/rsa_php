@@ -8,7 +8,7 @@ https://github.com/teguh02/rsa_js
 
 # Installation
 If you want to install this library you can install with this command
-
+<code>composer require teguh02/rsa_php</code>
 
 # Usage
 ```php
