@@ -71,24 +71,24 @@ class RSA {
     }
 
     // Fungsi untuk dekripsi pesan
-    static function decrypt($ciphertext, $privateKey) { 
-        // cek apakah $ciphertext adalah text 
-        if (is_string($ciphertext)) {
-            // cek apakah $ciphertext adalah text yang berisi koma dan spasi
-            if (strpos($ciphertext, ', ') !== false) {
-                $ciphertext = explode(', ', $ciphertext);
+    static function decrypt($chipertext, $privateKey) { 
+        // cek apakah $chipertext adalah text 
+        if (is_string($chipertext)) {
+            // cek apakah $chipertext adalah text yang berisi koma dan spasi
+            if (strpos($chipertext, ', ') !== false) {
+                $chipertext = explode(', ', $chipertext);
             } else {
-                $ciphertext = explode(',', $ciphertext);
+                $chipertext = explode(',', $chipertext);
             }
 
             // Konversi nilai dari string ke integer array
-            $ciphertext = array_map('intval', $ciphertext);
+            $chipertext = array_map('intval', $chipertext);
         }
 
         list($d, $n) = $privateKey['private'];
-        // Dekripsi setiap nilai dalam ciphertext dengan rumus m = c^d mod n, lalu ubah kembali menjadi karakter ASCII
+        // Dekripsi setiap nilai dalam chipertext dengan rumus m = c^d mod n, lalu ubah kembali menjadi karakter ASCII
         $decrypted = "";
-        foreach ($ciphertext as $c) {
+        foreach ($chipertext as $c) {
             $m = bcpowmod($c, $d, $n);
             $decrypted .= chr($m);
         }
